@@ -1,0 +1,27 @@
+body {
+    font-family: monospace;
+}
+
+@media (min-width: 40em) {
+    body {
+        padding: 5em 5em;
+    }
+}
+
+@media (min-width: 60em) {
+    body {
+        padding: 5em 15em;
+    }
+}
+
+@media (min-width: 80em) {
+    body {
+        padding: 5em 25em;
+    }
+}
+
+@media (min-width: 100em) {
+    body {
+        padding: 5em 30em;
+    }
+}
