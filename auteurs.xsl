@@ -51,11 +51,14 @@
             <td><xsl:value-of select="prenom"/></td>
             <td><xsl:value-of select="nom"/></td>
             <td><xsl:value-of select="pays"/></td>
-            <td><img src="{photo}">
-                <xsl:attribute name="height">100</xsl:attribute>
-                <xsl:attribute name="width">100</xsl:attribute>
-                <xsl:attribute name="alt">Photo de l'auteur</xsl:attribute>
-            </img>
+            <td>
+                <xsl:if test="photo">
+                    <img src="{photo}">
+                        <xsl:attribute name="height">100</xsl:attribute>
+                        <xsl:attribute name="width">100</xsl:attribute>
+                        <xsl:attribute name="alt">Photo de l'auteur</xsl:attribute>
+                    </img>
+                </xsl:if>
             </td>
             <td><xsl:value-of select="commentaire"/></td>
             <td>

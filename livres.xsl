@@ -64,13 +64,19 @@
             <td><xsl:apply-templates select="prix"></xsl:apply-templates></td>
 
             <td>
-                <img src="{couverture}">
-                    <xsl:attribute name="height">100</xsl:attribute>
-                    <xsl:attribute name="width">100</xsl:attribute>
-                    <xsl:attribute name="alt">Couverture du livre</xsl:attribute>
-                </img>
+                <xsl:if test="couverture">
+                    <img src="{couverture}">
+                        <xsl:attribute name="height">100</xsl:attribute>
+                        <xsl:attribute name="width">100</xsl:attribute>
+                        <xsl:attribute name="alt">Couverture du livre</xsl:attribute>
+                    </img>
+                </xsl:if>
             </td>
-            <td><a href="{film}">lien vers le film</a></td>
+            <td>
+                <xsl:if test="couverture">
+                    <a href="{film}">lien vers le film</a>
+                </xsl:if>
+            </td>
             <td><xsl:value-of select="commentaire"/></td>
             <td>
                 <xsl:if test="personnage">
