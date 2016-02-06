@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs"
+    xmlns="http://www.w3.org/1999/xhtml"
     version="2.0">
     <xsl:output method="xml"
-        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
-        doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes"/>
+        doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+        doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+        encoding="UTF-8"
+        indent="yes"/>
 
     <xsl:param name="auteur" select="''"/>
 
     <xsl:template match="/">
-        <html>
+        <html xml:lang="fr" lang="fr">
             <head>
                 <title>Auteurs</title>
             </head>
             <body>
                 <table>
-                    <tr>
-                        <th>ID</th>
-                        <th>Prenom</th>
-                        <th>Nom</th>
-                        <th>Pays</th>
-                        <th>Photo</th>
-                        <th>Commentaire</th>
-                        <th>Livre(s)</th>
-                    </tr>
-                    <xsl:apply-templates select="bibliotheque/auteur[contains(nom,$auteur)]"/>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Prenom</th>
+                            <th>Nom</th>
+                            <th>Pays</th>
+                            <th>Photo</th>
+                            <th>Commentaire</th>
+                            <th>Livre(s)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <xsl:apply-templates select="bibliotheque/auteur[contains(nom,$auteur)]"/>
+                    </tbody>
                 </table>
-            </body>
-        </html>
+                <p>
+                    <a href="http://validator.w3.org/check?uri=referer">
+                        <img src="http://www.w3.org/Icons/valid-xhtml10"
+                            alt="Valid XHTML 1.0 Strict"
+                            height="31"
+                            width="88" />
+                    </a>
+                </p>
+                </body>
+            </html>
     </xsl:template>
 
     <xsl:template match="auteur">
@@ -46,9 +59,11 @@
             </td>
             <td><xsl:value-of select="commentaire"/></td>
             <td>
-                <ul>
-                <xsl:apply-templates select="/bibliotheque/livre[contains(@auteurs,$auteur_ident)]"></xsl:apply-templates>
-                </ul>
+                <xsl:if test="/bibliotheque/livre[contains(@auteurs,$auteur_ident)]">
+                    <ul>
+                        <xsl:apply-templates select="/bibliotheque/livre[contains(@auteurs,$auteur_ident)]"></xsl:apply-templates>
+                    </ul>
+                </xsl:if>
             </td>
         </tr>
     </xsl:template>
