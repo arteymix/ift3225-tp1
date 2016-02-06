@@ -11,22 +11,24 @@
 
     <xsl:template match="/">
         <html>
-        <body>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Prenom</th>
-                    <th>Nom</th>
-                    <th>Pays</th>
-                    <th>Photo</th>
-                    <th>Commentaire</th>
-                    <th>Livre(s)</th>
-                </tr>
-                <xsl:apply-templates select="bibliotheque/auteur[contains(nom,$auteur)]"/>
-            </table>
-
-        </body>
-            </html>
+            <head>
+                <title>Auteurs</title>
+            </head>
+            <body>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Prenom</th>
+                        <th>Nom</th>
+                        <th>Pays</th>
+                        <th>Photo</th>
+                        <th>Commentaire</th>
+                        <th>Livre(s)</th>
+                    </tr>
+                    <xsl:apply-templates select="bibliotheque/auteur[contains(nom,$auteur)]"/>
+                </table>
+            </body>
+        </html>
     </xsl:template>
 
     <xsl:template match="auteur">
@@ -39,6 +41,7 @@
             <td><img src="{photo}">
                 <xsl:attribute name="height">100</xsl:attribute>
                 <xsl:attribute name="width">100</xsl:attribute>
+                <xsl:attribute name="alt">Photo de l'auteur</xsl:attribute>
             </img>
             </td>
             <td><xsl:value-of select="commentaire"/></td>

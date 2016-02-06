@@ -11,6 +11,9 @@
 
     <xsl:template match="/">
         <html>
+            <head>
+                <title>Livres</title>
+            </head>
             <body>
                 <table>
                     <tr>
@@ -26,7 +29,6 @@
                     </tr>
                     <xsl:apply-templates select="bibliotheque/livre[contains(titre,$livre)]"/>
                 </table>
-
             </body>
         </html>
     </xsl:template>
@@ -40,7 +42,6 @@
             <!-- afficher les auteurs-->
             <td>
                 <ul>
-
                     <xsl:apply-templates select="/bibliotheque/auteur[contains($auteurs,@ident)]"></xsl:apply-templates>
                 </ul>
             </td>
@@ -48,13 +49,20 @@
             <td><xsl:value-of select="annee"/></td>
             <td><xsl:apply-templates select="prix"></xsl:apply-templates></td>
 
-            <td><img src="{couverture}">
-                <xsl:attribute name="height">100</xsl:attribute>
-                <xsl:attribute name="width">100</xsl:attribute>
-            </img></td>
+            <td>
+                <img src="{couverture}">
+                    <xsl:attribute name="height">100</xsl:attribute>
+                    <xsl:attribute name="width">100</xsl:attribute>
+                    <xsl:attribute name="alt">Couverture du livre</xsl:attribute>
+                </img>
+            </td>
             <td><a href="{film}">lien vers le film</a></td>
             <td><xsl:value-of select="commentaire"/></td>
-            <td><xsl:apply-templates select="personnage"></xsl:apply-templates></td>
+            <td>
+                <ul>
+                    <xsl:apply-templates select="personnage"></xsl:apply-templates>
+                </ul>
+            </td>
         </tr>
     </xsl:template>
 
