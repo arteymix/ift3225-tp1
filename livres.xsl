@@ -14,8 +14,14 @@
         <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
             <head>
                 <title>Livres</title>
+                <link rel="stylesheet" href="style.css"/>
             </head>
             <body>
+                <h1>
+                    Livres
+                    <small><xsl:value-of select="$livre"/></small>
+                </h1>
+                <p><a href="rapport.html" alt="Lien vers le rapport">Retour au rapport</a></p>
                 <table>
                     <thead>
                         <tr>

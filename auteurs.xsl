@@ -14,8 +14,11 @@
         <html xml:lang="fr" lang="fr">
             <head>
                 <title>Auteurs</title>
+                <link rel="stylesheet" href="style.css"/>
             </head>
             <body>
+                <h1>Auteurs <small><xsl:value-of select="$auteur"/></small></h1>
+                <p><a href="rapport.html" alt="Lien vers le rapport">Retour au rapport</a></p>
                 <table>
                     <thead>
                         <tr>
