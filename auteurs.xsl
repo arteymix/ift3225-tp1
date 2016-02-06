@@ -40,8 +40,8 @@
                             width="88" />
                     </a>
                 </p>
-                </body>
-            </html>
+            </body>
+        </html>
     </xsl:template>
 
     <xsl:template match="auteur">

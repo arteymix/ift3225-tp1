@@ -12,7 +12,7 @@
         <couverture>http://ecx.images-amazon.com/images/I/51TjOvNMruL._SX388_BO1,204,203,200_.jpg</couverture>
         <commentaire>Trouvé sur amazon.ca</commentaire>
     </livre>
-    
+
     <livre xml:lang="Fr" auteurs="A000004">
         <titre>Les Belles Soeurs</titre>
         <annee>1992</annee>
@@ -36,7 +36,7 @@
             <commentaire>Fille de Germaine Lauzon</commentaire>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="Fr" auteurs="A000005">
         <titre>Un ange cornu avec des ailes de tôle</titre>
         <annee>2015</annee>
@@ -50,7 +50,7 @@
             <commentaire>La mère de Michel Tremblay s'appelle Rhéauna</commentaire>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000001">
         <titre>The Game</titre>
         <annee>2005</annee>
@@ -65,7 +65,7 @@
             <pays>Canada</pays>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000004 A000006">
         <titre>Albertine in Five Times</titre>
         <annee>1986</annee>
@@ -73,7 +73,7 @@
             <valeur>16.95</valeur>
         </prix>
     </livre>
-    
+
     <livre xml:lang="Fr" auteurs="A000007">
         <titre>Persepolis</titre>
         <annee>2000</annee>
@@ -90,7 +90,7 @@
             <commentaire>C'est l'écrivaine</commentaire>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000008">
         <titre>Code: The Hidden Language of Computer Hardware and Software</titre>
         <annee>2000</annee>
@@ -98,7 +98,7 @@
             <valeur>19.99</valeur>
         </prix>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000009">
         <titre>The Bro Code</titre>
         <annee>2008</annee>
@@ -116,7 +116,7 @@
             <commentaire>Personnage principal de HIMYM et ami de Barney.</commentaire>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000009">
         <titre>The Playbook</titre>
         <annee>2010</annee>
@@ -130,7 +130,7 @@
             <pays>États-Unis</pays>
         </personnage>
     </livre>
-    
+
     <livre xml:lang="En" auteurs="A000009">
         <titre>Bro on the Go</titre>
         <annee>2009</annee>
@@ -145,8 +145,8 @@
         </personnage>
     </livre>
     <!--Fin de la déclaration des 10 livres-->
-    
-    
+
+
     <!--AUTEURS-->
     <auteur ident="A000000">
         <prenom>Ano</prenom>
@@ -154,56 +154,56 @@
         <photo>http://obsweb.net/wp-content/uploads/2015/02/Anonymous.jpg</photo>
         <commentaire>Auteur anonyme</commentaire>
     </auteur>
-    
+
     <auteur ident="A000001">
         <nom>Dryden</nom>
         <prenom>Ken</prenom>
         <pays>Canada</pays>
         <photo>http://www.duhaime.org/Portals/duhaime/images/Dryden_Ken.jpg</photo>
-       <commentaire>Ancien joeur des Canadiens de Montréal</commentaire> 
+        <commentaire>Ancien joeur des Canadiens de Montréal</commentaire>
     </auteur>
-    
+
     <auteur ident="A000002">
         <prenom>Stefen</prenom>
         <nom>Zweig</nom>
     </auteur>
-    
+
     <auteur ident="A000003">
         <prenom>Jean</prenom>
         <nom>Andrews</nom>
     </auteur>
-    
+
     <auteur ident="A000004">
         <nom>Tremblay</nom>
         <prenom>Michel</prenom>
         <pays>Canada</pays>
         <commentaire>Avant exil</commentaire>
     </auteur>
-    
+
     <auteur ident="A000005">
         <nom>Tremblay</nom>
         <prenom>Michel</prenom>
         <pays>Guatemala</pays>
         <commentaire>Après exil</commentaire>
     </auteur>
-    
+
     <auteur ident="A000006">
         <nom>Glassco</nom>
         <prenom>Bill</prenom>
         <commentaire>Traducteur</commentaire>
     </auteur>
-    
+
     <auteur ident="A000007">
         <prenom>Marjane</prenom>
         <nom>Satrapi</nom>
         <pays>Iran</pays>
     </auteur>
-    
+
     <auteur ident="A000008">
         <nom>Petzold</nom>
         <prenom>Charles</prenom>
     </auteur>
-    
+
     <auteur ident="A000009">
         <nom>Stinson</nom>
         <prenom>Barney</prenom>
@@ -212,5 +212,5 @@
         <commentaire>De How I Met Your Mother</commentaire>
     </auteur>
     <!--Fin de la déclaration des 10 auteurs-->
-    
+
 </bibliotheque>
