@@ -1,0 +1,26 @@
+start = element bibliotheque {(livre | auteur)*}
+
+livre = element livre {
+    attribute xml:lang {xsd:language},
+    attribute auteurs {xsd:IDREFS},
+    element titre {text},
+    element annee {xsd:gYear},
+    element prix {
+        element valeur {xsd:decimal {fractionDigits = "2"}},
+        attribute monnaie {xsd:string{pattern = "[A-Z]{3}"}}?
+    },
+    element couverture {xsd:anyURI}?,
+    element film {xsd:anyURI}?,
+    element commentaire {text}?,
+    element personnage {individu}*
+}
+
+auteur = element auteur {individu}
+
+# details d'un individu qui est soit un auteur, soit un personnage
+individu =
+    attribute ident {xsd:ID},
+    (element nom {text} & element prenom {text}),
+    element pays {text}?,
+    element photo {xsd:anyURI}?,
+    element commentaire {text}? 

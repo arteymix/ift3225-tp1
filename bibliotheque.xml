@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="schema.rnc" type="application/relax-ng-compact-syntax"?>
+<bibliotheque>
+    <!-- En tout, on a fait 10 livres, 10 personnages et 10 auteurs-->
+    <!--LIVRES-->
+    <livre xml:lang="En" auteurs="A000003">
+        <titre>A+ Guide for IT Technical Support</titre>
+        <annee>2016</annee>
+        <prix monnaie="CDN">
+            <valeur>166.95</valeur>
+        </prix>
+        <couverture>http://ecx.images-amazon.com/images/I/51TjOvNMruL._SX388_BO1,204,203,200_.jpg</couverture>
+        <commentaire>Trouvé sur amazon.ca</commentaire>
+    </livre>
+    
+    <livre xml:lang="Fr" auteurs="A000004">
+        <titre>Les Belles Soeurs</titre>
+        <annee>1992</annee>
+        <prix monnaie="CDN">
+            <valeur>13.87</valeur>
+        </prix>
+        <personnage ident="P000001">
+            <nom>Lauzon</nom>
+            <prenom>Germaine</prenom>
+            <pays>Quebec</pays>
+            <commentaire>Femme au foyer</commentaire>
+        </personnage>
+        <personnage ident="P000002">
+            <nom>Ouimet</nom>
+            <prenom>Rose</prenom>
+            <pays>Quebec</pays>
+        </personnage>
+        <personnage ident="P000003">
+            <nom>Lauzon</nom>
+            <prenom>Linda</prenom>
+            <commentaire>Fille de Germaine Lauzon</commentaire>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="Fr" auteurs="A000005">
+        <titre>Un ange cornu avec des ailes de tôle</titre>
+        <annee>2015</annee>
+        <prix>
+            <valeur>10.76</valeur>
+        </prix>
+        <personnage ident="P000004">
+            <nom>Desrosiers</nom>
+            <prenom>Rhéauna</prenom>
+            <pays>Quebec</pays>
+            <commentaire>La mère de Michel Tremblay s'appelle Rhéauna</commentaire>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000001">
+        <titre>The Game</titre>
+        <annee>2005</annee>
+        <prix monnaie="CND">
+            <valeur>14.07</valeur>
+        </prix>
+        <couverture></couverture>
+        <commentaire></commentaire>
+        <personnage ident="P000005">
+            <nom>Dryden</nom>
+            <prenom>Ken</prenom>
+            <pays>Canada</pays>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000004 A000006">
+        <titre>Albertine in Five Times</titre>
+        <annee>1986</annee>
+        <prix monnaie="CDN">
+            <valeur>16.95</valeur>
+        </prix>
+    </livre>
+    
+    <livre xml:lang="Fr" auteurs="A000007">
+        <titre>Persepolis</titre>
+        <annee>2000</annee>
+        <prix monnaie="EUR">
+            <valeur>40.00</valeur>
+        </prix>
+        <couverture>http://ecx.images-amazon.com/images/I/41j0HePe1BL._SX282_BO1,204,203,200_.jpg</couverture>
+        <film>https://www.google.ca/search?q=streaming+persepolis</film>
+        <commentaire>Bd autobiographique</commentaire>
+        <personnage ident="P000006">
+            <nom>Satrapi</nom>
+            <prenom>Marjane</prenom>
+            <pays>Iran</pays>
+            <commentaire>C'est l'écrivaine</commentaire>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000008">
+        <titre>Code: The Hidden Language of Computer Hardware and Software</titre>
+        <annee>2000</annee>
+        <prix monnaie="USD">
+            <valeur>19.99</valeur>
+        </prix>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000009">
+        <titre>The Bro Code</titre>
+        <annee>2008</annee>
+        <prix monnaie="USD">
+            <valeur>12.35</valeur>
+        </prix>
+        <personnage ident="P000007">
+            <nom>Stinson</nom>
+            <prenom>Barney</prenom>
+            <pays>États-Unis</pays>
+        </personnage>
+        <personnage ident="P000010">
+            <nom>Mosby</nom>
+            <prenom>Ted</prenom>
+            <commentaire>Personnage principal de HIMYM et ami de Barney.</commentaire>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000009">
+        <titre>The Playbook</titre>
+        <annee>2010</annee>
+        <prix>
+            <valeur>12.11</valeur>
+        </prix>
+        <couverture>http://www.zakladnik-ksiazek.pl/wp-content/uploads/2012/11/playbook_barney_stinson.jpg</couverture>
+        <personnage ident="P000008">
+            <nom>Stinson</nom>
+            <prenom>Barney</prenom>
+            <pays>États-Unis</pays>
+        </personnage>
+    </livre>
+    
+    <livre xml:lang="En" auteurs="A000009">
+        <titre>Bro on the Go</titre>
+        <annee>2009</annee>
+        <prix monnaie="MXN">
+            <valeur>144.63</valeur>
+        </prix>
+        <commentaire>Monto en pesos</commentaire>
+        <personnage ident="P000009">
+            <nom>Stinson</nom>
+            <prenom>Barney</prenom>
+            <pays>États-Unis</pays>
+        </personnage>
+    </livre>
+    <!--Fin de la déclaration des 10 livres-->
+    
+    
+    <!--AUTEURS-->
+    <auteur ident="A000000">
+        <prenom>Ano</prenom>
+        <nom>nyme</nom>
+        <photo>http://obsweb.net/wp-content/uploads/2015/02/Anonymous.jpg</photo>
+        <commentaire>Auteur anonyme</commentaire>
+    </auteur>
+    
+    <auteur ident="A000001">
+        <nom>Dryden</nom>
+        <prenom>Ken</prenom>
+        <pays>Canada</pays>
+        <photo>http://www.duhaime.org/Portals/duhaime/images/Dryden_Ken.jpg</photo>
+       <commentaire>Ancien joeur des Canadiens de Montréal</commentaire> 
+    </auteur>
+    
+    <auteur ident="A000002">
+        <prenom>Stefen</prenom>
+        <nom>Zweig</nom>
+    </auteur>
+    
+    <auteur ident="A000003">
+        <prenom>Jean</prenom>
+        <nom>Andrews</nom>
+    </auteur>
+    
+    <auteur ident="A000004">
+        <nom>Tremblay</nom>
+        <prenom>Michel</prenom>
+        <pays>Canada</pays>
+        <commentaire>Avant exil</commentaire>
+    </auteur>
+    
+    <auteur ident="A000005">
+        <nom>Tremblay</nom>
+        <prenom>Michel</prenom>
+        <pays>Guatemala</pays>
+        <commentaire>Après exil</commentaire>
+    </auteur>
+    
+    <auteur ident="A000006">
+        <nom>Glassco</nom>
+        <prenom>Bill</prenom>
+        <commentaire>Traducteur</commentaire>
+    </auteur>
+    
+    <auteur ident="A000007">
+        <prenom>Marjane</prenom>
+        <nom>Satrapi</nom>
+        <pays>Iran</pays>
+    </auteur>
+    
+    <auteur ident="A000008">
+        <nom>Petzold</nom>
+        <prenom>Charles</prenom>
+    </auteur>
+    
+    <auteur ident="A000009">
+        <nom>Stinson</nom>
+        <prenom>Barney</prenom>
+        <pays>États-Unis</pays>
+        <photo>https://pbs.twimg.com/profile_images/2925485686/23b6d30cdb4e3b6dca5ead7b351f06d1_400x400.jpeg</photo>
+        <commentaire>De How I Met Your Mother</commentaire>
+    </auteur>
+    <!--Fin de la déclaration des 10 auteurs-->
+    
+</bibliotheque>

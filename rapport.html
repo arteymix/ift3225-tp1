@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>Rapport</title>
+    </head>
+    <body>
+        <h1>Liens vers nos différents fichiers</h1>
+			<ul>
+				<li><a href="bibliotheque.xml">Notre XML</a></li>
+				<li><a href="schema.rnc">Notre RNG</a></li>
+				<li><a href="auteurs.xsl">Notre XSLT pour les auteurs</a></li>
+				<li><a href="livres.xsl">Notre XSLT pour les livres</a></li>
+				<li><a href="vueAuteurs.xhtml">Notre vue pour les auteurs (en XHTML)</a></li>
+				<li><a href="vueLivres.xhtml">Notre vue pour les livres (en XHTML)</a></li>
+			</ul>
+			
+        
+        <h1>Choix sciemment faits</h1>
+        <ul>
+        	<li>L'attribut monnaie est sur l'élément prix et non valeur.</li>
+	       	<li>Dans l'élément individu, chacun des éléments suivants sont optionnels (et non leur ordre): pays, photo et commentaire.</li>
+        	<li>La monnaie est sous la forme XXX, i.e. trois lettres majuscules qui représente la devise.</li>
+        	<li>Les IDs des auteurs commencent par un A majuscule suivis de 6 chiffres. Les IDs des personnages sont de la même forme mais leur première lettre est un P majuscule. Il s'agit d'une petite convention pour voir d'un coup d'oeil si l'ID référence un auteur ou un personnage.</li>
+        	<li>Les personnages ont aussi des identifiants puisqu'il est écrit dans l'énoncé qu'ils sont pareils à des auteurs. Cela étant dit, nous savons que cela ne fait pas vraiment de sens de mettre un ID à un personnage s'il ne sera jamais référé. Si nous n'étions pas contraint par l'énoncé, dans un livre, nous aurions placé une liste de référence (IDREFS) à des personnages, exactement comme on fait pour les auteurs. Ceci permettrait de créer une seule fois un personnage qui apparaitrait dans plusieurs livres, par exemple dans le cas d'une série.</li>
+			<li>Pour rentrer le nom d'un auteur en paramètre pour visualiser ses informations, il suffit de changer la valeur du select du param dont le name="auteur" à la ligne 8 du fichier auteurs.xsl. Pour afficher les informations de Michel Tremblay, on écrit select="'Tremblay'" comme attribut de xls:param. Si on veut afficher tous les auteurs, on laisse ce champs vide, i.e. on écrit select="''".</li>
+			<li>Pour afficher les informations associées à un ou tous les livres, on fait la même chose dans le fichier livres.xsl.</li>
+        </ul>
+		
+		<h1>Ce qu'on a appris</h1>
+		Nous avons appris:
+		<ul>
+			<li>À utiliser oXygen.</li>
+			<li>À utiliser des XPath. La fonction contains nous a vraiment été utile!</li>
+			<li>À créer et appeler des templates. En particulier, nous avons créer un template qui peut être appelé par deux paramètres différents. En effet, nous avons utiliser match="auteur | personnage". Étant donné que les auteurs et les personnages sont des individus, et donc qu'ils ont les mêmes attributs et les mêmes éléments, ceci fonctionne bien. </li>
+			
+		</ul>
+    </body>
+</html>
