@@ -28,7 +28,7 @@
                             <th>Titre</th>
                             <th>Auteurs</th>
                             <th>Langue</th>
-                            <th>Annee</th>
+                            <th>Année</th>
                             <th>Prix</th>
                             <th>Couverture</th>
                             <th>Film</th>
@@ -67,7 +67,7 @@
             </td>
             <td><xsl:value-of select="@xml:lang"/></td>
             <td><xsl:value-of select="annee"/></td>
-            <td><xsl:apply-templates select="prix"></xsl:apply-templates></td>
+            <td style="text-align: right;"><xsl:apply-templates select="prix"></xsl:apply-templates></td>
 
             <td>
                 <xsl:if test="couverture">
