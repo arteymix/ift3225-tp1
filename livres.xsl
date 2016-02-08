@@ -79,7 +79,7 @@
                 </xsl:if>
             </td>
             <td>
-                <xsl:if test="couverture">
+                <xsl:if test="film">
                     <a href="{film}">lien vers le film</a>
                 </xsl:if>
             </td>
@@ -99,7 +99,10 @@
     </xsl:template>
 
     <xsl:template match="auteur | personnage">
-        <li><xsl:value-of select="nom"/>, <xsl:value-of select="prenom"/> (<xsl:value-of select="pays"/>)</li>
+        <li>
+            <xsl:value-of select="nom"/>, <xsl:value-of select="prenom"/>
+            <xsl:if test="pays">&#160;(<xsl:value-of select="pays"/>)</xsl:if>
+        </li>
     </xsl:template>
 
 </xsl:stylesheet>
